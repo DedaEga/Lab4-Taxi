@@ -210,4 +210,14 @@ int main() {
 	vector <int> price, dis;	    //dis-distance
 	cout << "Vvedite kolichestvo passazhirov: ";
 	cin >> pas;
+	for (int i = 0; i < pas; i++) {	
+		cout << "Rasstoyanie do doma v km passazhira #" << i + 1 <<": ";
+		cin >> t;
+		dis.push_back(t);
+	}
+	for (int i = 0; i < pas; i++) {	
+		cout << "Stoimost' za km taksista #"<< i + 1 << ": ";
+		cin >> t;
+		price.push_back(t);
+	}
 }
