@@ -1,6 +1,5 @@
 ﻿#include <iostream>
 #include <vector>
-#include <windows.h>
 using namespace std;
 string rubli(int i) {
 	string r = "";
@@ -204,9 +203,7 @@ string chisla(int y) {
 	return chislo;
 }
 int main() {
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
-	int t, pas, sum;				//t-temp, pas-passanger,
+	int t, pas, sum = 0;				//t-temp, pas-passanger,
 	vector <int> price, dis;	    //dis-distance
 	cout << "Vvedite kolichestvo passazhirov: ";
 	cin >> pas;
@@ -232,5 +229,10 @@ int main() {
 			}
 		}
 	}
-
+	for (int i = 0; i < pas; i++) {				//vyvod
+		cout << "Passazhir, kotoromu do doma " << dis[i] << " km, poedet po cene " << price[i] << " za 1 km" << endl;
+		cout << "Stoimost' poezdki: " << dis[i] * price[i] << endl;
+		sum = sum + (dis[i] * price[i]);
+	}
+	cout << "Stoimost' vsekh poezdkok - "<< sum <<'(' << chisla(sum) <<')'; //vyvod slovami
 }
