@@ -206,6 +206,8 @@ string chisla(int y) {
 int main() {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	
+	int t, pas, sum;				//t-temp, pas-passanger,
+	vector <int> price, dis;	    //dis-distance
+	cout << "Vvedite kolichestvo passazhirov: ";
+	cin >> pas;
 }
-
