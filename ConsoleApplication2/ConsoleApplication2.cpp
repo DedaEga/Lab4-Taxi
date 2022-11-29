@@ -220,4 +220,17 @@ int main() {
 		cin >> t;
 		price.push_back(t);
 	}
+	for (int i = 0; i < pas; i++) {				//bubblesort
+		for (int j = 0; j < pas - 1; j++) {		//Sortirovka rasstoyaniya
+			if (dis[j] > dis[j + 1]) {
+				swap(dis[j], dis[j + 1]);
+			}
+		}
+		for (int j = 0; j < pas - 1; j++) {		//Sortirovka ceny, no po ubyvaniyu
+			if (price[j] < price[j + 1]) {
+				swap(price[j], price[j + 1]);
+			}
+		}
+	}
+
 }
