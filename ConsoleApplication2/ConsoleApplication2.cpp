@@ -215,6 +215,8 @@ int main() {
 		if (pas == 0) {
 			cout << "Nedopustimoe znachenie, poprobujte eshchyo raz\n";
 		}
+		cin.clear();
+		fflush(stdin);
 	}
 	for (int i = 0; i < pas; i++) {	
 		cout << "Rasstoyanie do doma v km passazhira #" << i + 1 <<": ";
