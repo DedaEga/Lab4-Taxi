@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <vector>
+#include <string>
 using namespace std;
 string rubli(int i) {
 	string r = "";
@@ -203,10 +204,18 @@ string chisla(int y) {
 	return chislo;
 }
 int main() {
-	int t, pas, sum = 0;				//t-temp, pas-passanger,
+	char a [256];
+	int t, pas = 0, sum = 0;				//t-temp, pas-passanger,
 	vector <int> price, dis;	    //dis-distance
-	cout << "Vvedite kolichestvo passazhirov: ";
-	cin >> pas;
+	while (pas == 0)
+	{
+		cout << "Vvedite kolichestvo passazhirov: ";
+		cin >> a;
+		pas = atoi(a);
+		if (pas == 0) {
+			cout << "Nedopustimoe znachenie, poprobujte eshchyo raz\n";
+		}
+	}
 	for (int i = 0; i < pas; i++) {	
 		cout << "Rasstoyanie do doma v km passazhira #" << i + 1 <<": ";
 		cin >> t;
